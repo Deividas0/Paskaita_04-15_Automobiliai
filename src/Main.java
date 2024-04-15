@@ -26,22 +26,5 @@ public class Main {
         nuoma.pridetiYSarasa(citroenEv);
 
         nuoma.nuomosKaina();
-
-//        int x = 1;
-//        for (Automobilis a : nuoma.automobiliuSarasas) {
-//            System.out.println(x + ". " + a);
-//            x++;
-//            switch (a.getMarke()) {
-//                case "Audi":
-//                    System.out.println(nuoma.automobiliuSarasas.indexOf(a) + "Indexo automobilis yra Audi");
-//                    break;
-//                default:
-//                    System.out.println(nuoma.automobiliuSarasas.indexOf(a) + "Indexo automobilis nėra Audi");
-//                    break;
-//            }
-//        }
-//        for (int i = 0; i < nuoma.automobiliuSarasas.size(); i++) {
-//            System.out.println(i + 1 + ". " + nuoma.automobiliuSarasas.get(i));
-//        }
     }
 }
