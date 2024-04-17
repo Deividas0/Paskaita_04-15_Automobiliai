@@ -28,37 +28,37 @@ public class Nuoma {
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.getFirst());
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 100Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 100)+"Eur.");
+                System.out.println("Paros kaina: 100Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(0).getKaina())+"Eur.");
                 break;
             case 2:
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.get(1));
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 75Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 75)+"Eur.");
+                System.out.println("Paros kaina: 75Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(1).getKaina())+"Eur.");
                 break;
             case 3:
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.get(2));
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 50Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 50)+"Eur.");
+                System.out.println("Paros kaina: 50Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(2).getKaina())+"Eur.");
                 break;
             case 4:
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.get(3));
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 150Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 150)+"Eur.");
+                System.out.println("Paros kaina: 150Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(3).getKaina())+"Eur.");
                 break;
             case 5:
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.get(4));
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 125Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 125)+"Eur.");
+                System.out.println("Paros kaina: 125Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(4).getKaina())+"Eur.");
                 break;
             case 6:
                 System.out.println("Jūs pasirinkote: " + automobiliuSarasas.get(5));
                 System.out.println("Kiek dienų norėsite naudoti automobilį?");
                 a = sc.nextInt();
-                System.out.println("Paros kaina: 100Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * 100)+"Eur.");
+                System.out.println("Paros kaina: 100Eur. "+"Pasirinkote "+a+" dienų kiekį. "+"Bendra nuomos suma bus: "+(a * automobiliuSarasas.get(5).getKaina())+"Eur.");
                 break;
             default:
                 System.out.println("Ivyko klaida bandykite dar karta.");
