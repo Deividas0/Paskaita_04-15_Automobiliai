@@ -4,19 +4,92 @@ import java.util.Scanner;
 
 public class Nuoma {
     List<Automobilis> automobiliuSarasas = new ArrayList<>();
-    List<String> klientuSarasas = new ArrayList<String>();
+    List<Klientas> klientuSarasas = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     AutomobiliuDuomenuModifikatorius ADM = new AutomobiliuDuomenuModifikatorius();
 
     private int a;
 
+    public void pridetiKlientaYSarasa(Klientas klientas) {
+        klientuSarasas.add(klientas);
+    }
+
+    public void panaikintiKlientaIsSaraso(int naikinti) {
+        klientuSarasas.remove(naikinti);
+    }
 
     public void pridetiYSarasa(Automobilis auto) {
         automobiliuSarasas.add(auto);
     }
 
-    public void isimtiIsSaraso(Automobilis auto) {
-        automobiliuSarasas.remove(auto);
+    public int nuomosSarasas() {
+        Klientas klientas;
+        System.out.println("Pasirinkite funkcija:");
+        System.out.println("1. Sukurti nauja klientą.");
+        System.out.println("2. Pašalinti klientą iš sąrašo.");
+        System.out.println("3. Patikrinti automobilių sąrašą.");
+        System.out.println("4. Išnuomoti automobilį klientui.");
+        switch (sc.nextInt()) {
+            case 1:
+                System.out.println("Įveskite naujo kliento informacija: ");
+                System.out.println("Kliento vardas ir pavardė: ");
+                sc.nextLine();
+                String[] vardasPavarde = sc.nextLine().split(" ");
+                klientas = new Klientas(vardasPavarde[0], vardasPavarde[1]);
+                pridetiKlientaYSarasa(klientas);
+                System.out.println("Dabartinis klientų sarašas: ");
+                int i = 1;
+                for (Klientas a : klientuSarasas) {
+                    System.out.println(i + ". " + a);
+                    i++;
+                }
+                nuomosSarasas();
+                break;
+            case 2:
+                int ii = 1;
+                System.out.println("Pasirinkite kurį klientą norite pašalinti: ");
+                for (Klientas a : klientuSarasas) {
+                    System.out.println(ii + ". " + a);
+                    ii++;
+                }
+                int naikinti = sc.nextInt() - 1;
+                panaikintiKlientaIsSaraso(naikinti);
+                System.out.println("Dabartinis klientų sarašas: ");
+                ii = 1;
+                for (Klientas a : klientuSarasas) {
+                    System.out.println(ii + ". " + a);
+                    ii++;
+                }
+                nuomosSarasas();
+                break;
+            case 3:
+                int x = 1;
+                for (Automobilis a : automobiliuSarasas) {
+                    System.out.println(x + ". " + a);
+                    x++;
+                }
+                nuomosSarasas();
+            case 4:
+                System.out.println("Pasirinkite klientą kuriam bus išnuomuotas automobilis: ");
+                ii = 1;
+                for (Klientas a : klientuSarasas) {
+                    System.out.println(ii + ". " + a);
+                    ii++;
+                }
+                int client = sc.nextInt();
+                System.out.println("Pasirinkite automobilį: ");
+                x = 1;
+                for (Automobilis b : automobiliuSarasas) {
+                    System.out.println(x + ". " + b);
+                    x++;
+                }
+                int auto = sc.nextInt();
+                klientuSarasas.get(client - 1).priskirtiDabarNuomuojamas(automobiliuSarasas.get(auto - 1));
+                System.out.println(klientuSarasas.get(client-1).getDabarNuomuojasi());
+        }
+        nuomosSarasas();
+
+        return 0;
     }
 
     public int nuomosKaina() {
@@ -139,8 +212,13 @@ public class Nuoma {
                         System.out.println("Įkrovimo laikas sėkmingai pakeistas į - " + ((ElektrinisAutomobilis) automobiliuSarasas.get(5)).getBaterijosKrovimoLaikas());
                         break;
                 }
+
         }
 
+
     }
+
 }
+
+
 

@@ -27,6 +27,7 @@ public class Main {
         citroenEv.setRida(123456789);
 
         Nuoma nuoma = new Nuoma();
+
         nuoma.pridetiYSarasa(audi);
         nuoma.pridetiYSarasa(ford);
         nuoma.pridetiYSarasa(seat);
@@ -38,7 +39,9 @@ public class Main {
 
 
         //nuoma.nuomosKaina();
-        nuoma.parametruModifikavimas();
+        //nuoma.parametruModifikavimas();
+        nuoma.nuomosSarasas();
+
 
     }
 }
