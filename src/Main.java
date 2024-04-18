@@ -6,16 +6,25 @@
 ////Pridėti viso autoparko atspausdinimą. Susikūrus klasę autoparkas prisidėti sąrašą automobilių.
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
         NaftosKuroAutomobilis audi = new NaftosKuroAutomobilis("Audi", "A6", 2020, 100, 6.7);
+        audi.setRida(123456789);
         NaftosKuroAutomobilis ford = new NaftosKuroAutomobilis("Ford", "Kuga", 2018, 75, 5.2);
+        ford.setRida(123456789);
         NaftosKuroAutomobilis seat = new NaftosKuroAutomobilis("Seat", "Ibiza", 2024, 50, 4.8);
+        seat.setRida(123456789);
 
         ElektrinisAutomobilis audiEv = new ElektrinisAutomobilis("Audi", "E-tron", 2023, 150, 78);
+        audiEv.setRida(123456789);
         ElektrinisAutomobilis bmwEv = new ElektrinisAutomobilis("BMW", "iX3", 2024, 125, 67);
+        bmwEv.setRida(123456789);
         ElektrinisAutomobilis citroenEv = new ElektrinisAutomobilis("Citroen", "e-SpaceTourer", 2024, 100, 121);
+        citroenEv.setRida(123456789);
 
         Nuoma nuoma = new Nuoma();
         nuoma.pridetiYSarasa(audi);
@@ -25,6 +34,11 @@ public class Main {
         nuoma.pridetiYSarasa(bmwEv);
         nuoma.pridetiYSarasa(citroenEv);
 
-        nuoma.nuomosKaina();
+
+
+
+        //nuoma.nuomosKaina();
+        nuoma.parametruModifikavimas();
+
     }
 }

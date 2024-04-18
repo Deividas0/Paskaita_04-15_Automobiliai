@@ -13,5 +13,5 @@ public class NaftosKuroAutomobilis extends Automobilis{
 
     public double getL100Km() {return l100Km;}
 
-    public void setL100Km(int l100Km) {this.l100Km = l100Km;}
+    public void setL100Km(double l100Km) {this.l100Km = l100Km;}
 }
