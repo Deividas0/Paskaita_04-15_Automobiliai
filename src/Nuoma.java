@@ -84,7 +84,7 @@ public class Nuoma {
                     x++;
                 }
                 int auto = sc.nextInt();
-                klientuSarasas.get(client - 1).priskirtiDabarNuomuojamas(automobiliuSarasas.get(auto - 1));
+                klientuSarasas.get(client-1).priskirtiDabarNuomuojamas(automobiliuSarasas.get(auto-1));
                 System.out.println(klientuSarasas.get(client-1).getDabarNuomuojasi());
         }
         nuomosSarasas();
